@@ -17,7 +17,8 @@ The workflow: **research** your earned secrets → **draft** all fields → **sc
 ## Install
 
 ```bash
-claude plugin install apply-a16z
+claude plugin marketplace add thisisfatih/apply-a16z
+claude plugin install apply-a16z@thisisfatih
 ```
 
 Requires Claude Code. No API keys, no external services, no data leaves your machine.
