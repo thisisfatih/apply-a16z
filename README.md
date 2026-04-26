@@ -1,6 +1,6 @@
 # apply-a16z
 
-![version](https://img.shields.io/badge/version-0.1.0-green)
+![version](https://img.shields.io/badge/version-0.9.1-green)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![platform](https://img.shields.io/badge/platform-Claude%20Code-blue)
 
