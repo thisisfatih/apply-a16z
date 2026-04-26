@@ -1,0 +1,15 @@
+{
+  "name": "apply-a16z",
+  "owner": {
+    "name": "thisisfatih",
+    "url": "https://github.com/thisisfatih"
+  },
+  "plugins": [
+    {
+      "name": "apply-a16z",
+      "source": "./",
+      "description": "Help founders write killer a16z speedrun applications. Guides every field, scores against a16z criteria, sharpens weak answers.",
+      "version": "0.1.0"
+    }
+  ]
+}
