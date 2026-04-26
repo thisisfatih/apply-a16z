@@ -16,3 +16,4 @@
 2026-04-26 15:34 : feat: initial release v0.1.0 — @fatih
 2026-04-26 16:11 : feat: rewrite field map + drafting logic from live form DOM snapshot — @fatih
 2026-04-26 16:14 : chore: gitignore playwright-mcp snapshots and backup files — @fatih
+2026-04-26 16:29 : fix: correct CLAUDE.md skill map and linkcheck reliability — @fatih

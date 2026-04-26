@@ -4,13 +4,14 @@ Instructions for Claude when working in this repository.
 
 ## What this repo is
 
-A Claude Code plugin that helps founders write strong a16z speedrun applications. The plugin provides four commands (`/apply`, `/score`, `/sharpen`, `/research`), four agents, and nine skills.
+A Claude Code plugin that helps founders write strong a16z speedrun applications. The plugin provides five commands (`/apply`, `/fill`, `/score`, `/sharpen`, `/research`), five agents, and six skills.
 
 ## Architecture
 
 ```
 commands/                   slash commands — thin entry points that invoke skills
   apply.md                  full pipeline orchestrator
+  fill.md                   browser auto-fill via Playwright MCP
   score.md                  standalone eval
   sharpen.md                single-field rewrite
   research.md               pre-apply earned-secrets sprint
@@ -20,6 +21,7 @@ agents/
   vc-critic.md              adversarial reviewer, surfaces fatal flaws
   a16z-field-agent.md       maintains current application field list (community cache + founder paste)
   reviewer-agent.md         cold-reads the full application as a skeptical reviewer
+  form-filler.md            browser automation for live form fill (requires Playwright MCP)
 
 skills/
   apply/                    MASTER ORCHESTRATOR — runs full 5-stage pipeline
@@ -27,10 +29,7 @@ skills/
   earned-secrets/           Socratic interview → insight taxonomy → moat statement
   eval-answers/             5-dimension weighted scoring → export gate
   export-application/       3-format export (MD review, TXT copy-paste, JSON version record)
-  draft-application/        v0.1 field-by-field drafting (invoked by apply orchestrator)
-  research-founder/         v0.1 founder background surfacing (invoked by /research)
-  score-application/        v0.1 rubric scoring (invoked by /score)
-  sharpen-answers/          v0.1 single-field rewrite (invoked by /sharpen)
+  sharpen-answers/          single-field rewrite with before/after scoring
 
 docs/                       runtime reference — skills read these during execution
   a16z-speedrun-criteria.md what reviewers look for
@@ -46,8 +45,9 @@ hooks/                      session persistence (start: load progress, stop: sav
 
 | Command | Primary skill | Supporting skills/agents |
 |---------|--------------|--------------------------|
-| /apply | apply | → a16z-field-agent → earned-secrets → draft-application → eval-answers → export-application |
-| /research | research-founder | → earned-secrets |
+| /apply | apply | → a16z-field-agent → earned-secrets → eval-answers → export-application |
+| /fill | form-filler agent | requires Playwright MCP |
+| /research | earned-secrets | standalone sprint mode |
 | /score | eval-answers | → vc-critic (adversarial pass) |
 | /sharpen | sharpen-answers | → pitch-narrative (for narrative fields) |
 
@@ -85,7 +85,7 @@ These are runtime references — skills read them during execution. Edits here a
 
 `hooks/scripts/session-start.js` and `session-end.js` are Node.js scripts with no npm dependencies. Keep them dependency-free. They read/write `~/.apply-a16z/progress.json`.
 
-If you modify the progress JSON schema, update both hook scripts and the progress tracking format in `skills/draft-application/SKILL.md`.
+If you modify the progress JSON schema, update both hook scripts and the progress tracking format in `skills/apply/SKILL.md`.
 
 ## Do not
 
