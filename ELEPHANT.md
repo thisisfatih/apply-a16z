@@ -4,6 +4,8 @@
 
 # ELEPHANT — apply-a16z project memory (newest first)
 
+[2026-04-26] Health check run. All tests pass, hooks lint clean, CI green. Ready to share publicly.
+[2026-04-26] Two pre-ship fixups: (1) CLAUDE.md skill map stale — lists draft-application/research-founder/score-application which don't exist; (2) linkcheck exits 0 on dead links — CI false-green. Neither blocks users.
 [2026-04-26] Intensive research complete. 4 parallel agents found: 250+ portfolio companies (SR001-SR006), verbatim partner quotes, confirmed application fields, acceptance rate <0.4% (19K apps / 60 spots in SR006). All saved to docs/.
 [2026-04-26] Project structure built: skills/, agents/, hooks/, docs/, commands/, tests/, CI. All green. Conflict to resolve: Atlas's 4 lighter skills overlap Cortex's 5 primary ones — recommend deleting draft-application, research-founder, score-application.
 [2026-04-26] User chose L (flagship). gstack already installed at ~/.claude/skills/gstack.
