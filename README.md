@@ -10,7 +10,7 @@ The a16z speedrun program funds early-stage AI startups fast. The application is
 
 apply-a16z guides you through the application field-by-field. It asks the right questions to surface what makes your company specific and non-obvious, drafts answers from your raw material, scores every field against the criteria a16z reviewers actually use, and sharpens the weak ones before you submit.
 
-The workflow: **research** your earned secrets → **draft** all fields → **score** the draft → **sharpen** the weak fields → submit.
+The workflow: **research** your earned secrets → **draft** all fields → **score** the draft → **sharpen** the weak fields → **auto-fill the live form** → you click Submit.
 
 ---
 
@@ -23,13 +23,19 @@ claude plugin install apply-a16z@thisisfatih
 
 Requires Claude Code. No API keys, no external services, no data leaves your machine.
 
+**Optional — browser auto-fill** (fills the live form for you):
+```bash
+claude plugin install playwright@anthropic
+```
+
 ---
 
 ## Commands
 
 | Command | What it does |
 |---------|-------------|
-| `/apply` | Start or resume a full application session — intake, drafting, scoring |
+| `/apply` | Full pipeline — CV intake, questions, earned secrets, drafting, scoring |
+| `/fill` | Auto-fill the live form in your browser (requires Playwright MCP) |
 | `/score` | Score a draft or existing application against a16z criteria |
 | `/sharpen` | Rewrite a specific field to score higher — shows before/after with annotations |
 | `/research` | Surface your earned secrets and founder-market fit before drafting |

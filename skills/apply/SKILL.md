@@ -15,15 +15,43 @@ You are the master orchestrator for the `apply-a16z` plugin. When invoked, you r
 Tell the founder exactly what will happen:
 
 ```
-I'll guide you through your a16z speedrun application in 5 stages:
+I'll guide you through your a16z speedrun application in 6 stages:
 
-  1. Founder intake (10–15 min of questions)
+  1. Founder intake (questions + optional CV/resume read)
   2. Application field sync (confirm we have current form fields)
   3. Earned-secrets extraction (your real competitive moat)
   4. Answer drafting (I write, you refine)
   5. Eval + export (scored against a16z criteria, then exported)
+  6. Browser fill (optional — I fill the live form, you review and submit)
 
 Nothing gets submitted without your review. Let's start.
+
+Do you have a CV, resume, or LinkedIn export you'd like me to read?
+If yes, drop the file path or paste the content — I'll extract your
+background so you don't have to repeat it in the intake questions.
+```
+
+### CV / Resume intake (optional, before Block A)
+
+If the founder provides a file path:
+- Read the file (PDF, DOCX, TXT, MD all accepted)
+- Extract: name, roles, companies, notable outputs, domain tenure, any metrics
+- Pre-fill Block C (team) answers from the CV
+- Skip intake questions already answered by the CV — flag which ones were skipped
+
+If the founder pastes raw text (LinkedIn About, bio, etc.):
+- Parse the same fields from the text
+
+After reading, confirm what was extracted:
+```
+From your CV I extracted:
+  Name: [name]
+  Roles: [role list]
+  Key outputs: [specific things they built/shipped/scaled]
+  Domain tenure: [years in relevant space]
+
+I'll use this for the team and founder-market fit sections.
+Skipping those intake questions — moving to company basics.
 ```
 
 ---
@@ -204,6 +232,36 @@ For any answer scoring < 7, explain exactly what's weak and offer a revised draf
 **Reapplication note:** If this is a reapplication, explicitly ask "What has changed since your last application?" — 30% of SR005 cohort was previously rejected. Reapplication is encouraged and expected. Highlight the delta.
 
 After the founder approves all answers, invoke `export-application` to produce the final output.
+
+---
+
+## Stage 6 — Browser Fill (optional)
+
+After export, offer browser auto-fill:
+
+```
+Your answers are ready. Want me to fill the live form for you?
+
+  → I'll open speedrun.a16z.com/apply in your browser
+  → Fill every field with your approved answers
+  → Stop before Submit — you review and click it yourself
+
+Run /fill to start. Or submit manually using the exported text above.
+```
+
+If the founder runs `/fill`:
+- Invoke the `form-filler` agent
+- Pass the complete approved answer set
+- Pass the founder's email (ask if not yet collected)
+
+If Playwright MCP is not available:
+```
+⚠️  Playwright MCP not installed — browser fill unavailable.
+    Install it with: claude plugin install playwright@anthropic
+    Then run /fill again.
+
+    Your answers are exported above for manual copy-paste.
+```
 
 ---
 
