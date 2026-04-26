@@ -4,6 +4,7 @@
 
 # ELEPHANT — apply-a16z project memory (newest first)
 
+2026-04-26 21:40 : fix: hooks/hooks.json schema — wrapped event types under top-level "hooks" key; plugin was failing to load — @fatih
 [!!] 2026-04-26 21:32 : apex takeover complete — 7 specialists, HTML report at .reports/apex-takeover-2026-04-26-0000.html — @fatih
 [2026-04-26 21:32] CRITICAL: founder data plaintext at ~/.apply-a16z/progress.json, dir 755 (world-readable) — fix: mkdirSync mode 0o700
 [2026-04-26 21:32] CRITICAL: skills/apply/SKILL.md:409–411 references missing docs (a16z-speedrun-fields.md, answer-examples.md) — dead paths, Stage 2 silently broken
