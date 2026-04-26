@@ -4,6 +4,9 @@
 
 # ELEPHANT — apply-a16z project memory (newest first)
 
+[2026-04-26] a16z "Big Ideas" = their RFS equivalent. Published annually (parts 1-3 on a16z.com + speedrun.substack.com). Individual partners also post specific RFS threads (e.g. Jonathan Lai: "GUIs for Agents" — visual abstraction layer for agents).
+[2026-04-26] SR006 (Winter/Spring 2026) currently active. SR007 apps close May 17 2026, cohort runs Jul 27–Oct 11 2026.
+
 [2026-04-26] fix: created .claude-plugin/marketplace.json — without it `claude plugin marketplace add thisisfatih/apply-a16z` fails; now validated + pushed, install steps in README work.
 [2026-04-26] Health check run. All tests pass, hooks lint clean, CI green. Ready to share publicly.
 [2026-04-26] Two pre-ship fixups: (1) CLAUDE.md skill map stale — lists draft-application/research-founder/score-application which don't exist; (2) linkcheck exits 0 on dead links — CI false-green. Neither blocks users.
