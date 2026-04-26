@@ -100,6 +100,42 @@ After all blocks: "Got it. Now let me sync the current application fields."
 
 ---
 
+## Stage 1.5 — RFS Alignment Check
+
+After intake, before field sync: read `docs/a16z-big-ideas.md` and check if the founder's startup maps to any active a16z Big Idea or partner RFS.
+
+**How to check:**
+- Match the startup's domain, mechanism, and customer against the keywords in each theme
+- Check Partner RFS section first — these are highest-signal specific asks
+- Score alignment: direct / strong / weak / none (see alignment scoring guide at bottom of file)
+
+**If direct or strong match found:**
+
+```
+I found a direct alignment with an active a16z Big Idea:
+
+  Theme: [theme name]
+  Partner: [partner name]
+  What they want: [1-sentence summary]
+
+  Your startup matches because: [specific reason — don't be vague]
+
+  This is a meaningful signal. I recommend we:
+  1. Frame your startup description to explicitly address this theme
+  2. Reference the market shift they described as your "why now"
+  3. [If partner RFS] Mention this in the pitch deck — shows market awareness
+
+  Want to lean into this framing? Or keep your current framing and just note the overlap?
+```
+
+**If weak match:** note it in one line. Don't push it. "Your startup loosely touches [theme] but I wouldn't force-fit the framing."
+
+**If no match:** skip this step silently. Move to Stage 2.
+
+**Critical:** Never fabricate alignment. A false match that a reviewer recognizes is worse than no match.
+
+---
+
 ## Stage 2 — Application Field Sync
 
 Invoke the `a16z-field-agent` to retrieve current known fields. Display them to the founder:
@@ -261,10 +297,28 @@ Deck link must be publicly accessible. Private links = reviewers skip it.
 
 ---
 
+### Writing density by field
+
+Reviewers scan hundreds of applications. Different fields need different compression:
+
+| Field | Density | Rule |
+|-------|---------|------|
+| One-liner (10w) | **ultra** | Noun phrase. No articles. Count every word. |
+| Relevant experience | **full** | Drop articles. Fragments OK. Stack outputs, not roles. |
+| Team description | **full** | Drop articles. Facts + proof. No connective filler. |
+| Startup description | **lite** | Keep sentences. Drop filler. SCQA logic must survive. |
+| Traction notes | **full** | Numbers first. Context fragments. No hedging. |
+| Anything else | **lite** | Clear delta. No padding. Full sentences for clarity. |
+
+**Density levels:**
+- **ultra** — Noun phrases, abbreviate, minimum viable words ("AI underwriting, commercial brokers — $680K ARR")
+- **full** — Drop articles, fragments OK ("Built fraud detection at Stripe. Shipped to 40K merchants.")
+- **lite** — No filler/hedging, full sentences ("We built X because Y was broken in a specific way.")
+
 ### Voice rules (all fields)
 
 - First-person plural ("we") for team actions, first-person singular for founder insight
-- Sentences under 20 words. No passive voice.
+- No passive voice.
 - No hedging: "we hope to", "we think", "we believe", "we plan to"
 - One idea per sentence
 
