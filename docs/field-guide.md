@@ -23,7 +23,7 @@ Radio: 0–5. "Founders are individuals with over 10% equity." If part-time or n
 Number. Include founders. Part-time staff counted proportionally (2 × half-time = 1 FTE).
 
 ### Relevant experience (per founder)
-**Limit: 100 words. Required.**
+**Limit: 100 words. Required. Density: full** — drop articles, fragments OK, stack outputs.
 
 Prompt: "In a few sentences, highlight your most relevant professional, startup, or industry experience. Focus on track record, domain expertise, and past wins."
 
@@ -48,7 +48,7 @@ Yes/No. If No, explain in Team Description how this gap is covered.
 LinkedIn required for all founders. GitHub highly recommended for technical founders — it's a credibility signal reviewers check.
 
 ### Tell us more about the team
-**Limit: 100 words. Required.**
+**Limit: 100 words. Required. Density: full** — drop articles, facts + proof, no connective filler.
 
 Prompt: "How does the team know each other? Is there anyone else on the team? Why is this the best team to win? Do you have any key advisors?"
 
@@ -70,7 +70,7 @@ Prompt: "How does the team know each other? Is there anyone else on the team? Wh
 Text input. Name only.
 
 ### One-liner
-**Limit: 10 WORDS. Required.**
+**Limit: 10 WORDS. Required. Density: ultra** — noun phrase, no articles, count every word.
 
 Prompt: "What do you do and for whom? E.g. 'AI-powered therapist for Gen Z'"
 
@@ -88,7 +88,7 @@ Ten words. That's it. This is your first impression — make it concrete, not cl
 **Mistake:** Trying to be clever or poetic. Be obvious.
 
 ### Startup Description
-**Limit: 100 words. Required.**
+**Limit: 100 words. Required. Density: lite** — no filler/hedging, full sentences, SCQA logic must survive.
 
 Prompt: "What problem are you solving? What are you building?"
 
@@ -122,7 +122,7 @@ Pick the most accurate primary. Secondary is optional — only add if genuinely 
 Logistics fields. Fill accurately.
 
 ### Anything else we should know?
-**Limit: 100 words. Optional.**
+**Limit: 100 words. Optional. Density: lite** — clear delta/context, full sentences, no padding.
 
 Use this for: reapplication context ("Since our last application: [specific delta]"), unusual team structure explanations, or anything that doesn't fit elsewhere. Don't pad it — if you don't need it, leave it blank.
 
@@ -148,6 +148,8 @@ This is the primary narrative vehicle. Everything the 100-word fields can't hold
 **Avoid:** Advisor slides, Harvey Ball competitive matrices (feature checkbox tables), dense text slides, stock photos.
 
 **Deck link must be publicly accessible.** Private links = reviewers skip it.
+
+### Traction notes (100 words) — **Density: full** — numbers first, context in fragments, zero hedging.
 
 ### Traction — Optional but high-signal
 
