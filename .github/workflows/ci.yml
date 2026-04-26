@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── JSON validation ────────────────────────────────────────────────────
+      - name: Validate plugin.json
+        run: node tests/validate-plugin-json.js
+
+      # ── YAML frontmatter ───────────────────────────────────────────────────
+      - name: Validate skill frontmatter
+        run: node tests/validate-skill-frontmatter.js
+
+      # ── JS lint ────────────────────────────────────────────────────────────
+      - name: Lint hooks
+        run: npm run lint
+
+      # ── Examples non-empty ─────────────────────────────────────────────────
+      - name: Check examples directory
+        run: node tests/check-examples.js
+
+      # ── Markdown link check ────────────────────────────────────────────────
+      - name: Check markdown links
+        run: npm run linkcheck

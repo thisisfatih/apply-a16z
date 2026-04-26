@@ -1,0 +1,38 @@
+{
+  "name": "apply-a16z",
+  "version": "0.1.0",
+  "description": "Help founders write killer applications to the a16z speedrun program (up to $1M in funding). Guides through every field, scores drafts against a16z criteria, and sharpens answers until they convert.",
+  "author": {
+    "name": "apply-a16z contributors",
+    "url": "https://github.com/thisisfatih/apply-a16z"
+  },
+  "repository": "https://github.com/thisisfatih/apply-a16z",
+  "license": "MIT",
+  "keywords": ["a16z", "speedrun", "startup", "fundraising", "application", "vc"],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-start.js\"",
+            "timeout": 10,
+            "statusMessage": "Loading application progress..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-end.js\"",
+            "timeout": 10,
+            "statusMessage": "Saving application progress..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+coverage/
+.nyc_output/
+dist/
+.claude/settings.local.json
+a16z-fields-local.md

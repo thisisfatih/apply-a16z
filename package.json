@@ -1,0 +1,22 @@
+{
+  "name": "apply-a16z",
+  "version": "0.1.0",
+  "description": "Claude Code plugin — helps founders write a16z speedrun applications",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint 'hooks/scripts/**/*.js'",
+    "lint:fix": "eslint 'hooks/scripts/**/*.js' --fix",
+    "linkcheck": "find . -name '*.md' -not -path './node_modules/*' | xargs markdown-link-check --quiet",
+    "test": "node tests/validate-plugin-json.js && node tests/validate-skill-frontmatter.js && node tests/check-examples.js",
+    "validate": "npm run lint && npm test && npm run linkcheck"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "gray-matter": "^4.0.3",
+    "markdown-link-check": "^3.12.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
