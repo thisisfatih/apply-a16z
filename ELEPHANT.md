@@ -4,6 +4,9 @@
 
 # ELEPHANT — apply-a16z project memory (newest first)
 
+2026-04-26 22:12 : chore: bump version 0.1.0 → 0.9.1 — README badge + plugin.json updated together — @fatih
+2026-04-26 22:12 : feat: pre-commit hook enforces README badge version == plugin.json version — blocks commit on mismatch — @fatih
+2026-04-26 22:12 : rule: CLAUDE.md now documents version bump procedure (update both files in same commit) — @fatih
 2026-04-26 21:41 : chore: add .reports/ to .gitignore — public repo, internal apex reports should not leak — @fatih
 2026-04-26 21:40 : fix: hooks/hooks.json schema — wrapped event types under top-level "hooks" key; plugin was failing to load — @fatih
 [!!] 2026-04-26 21:32 : apex takeover complete — 7 specialists, HTML report at .reports/apex-takeover-2026-04-26-0000.html — @fatih
