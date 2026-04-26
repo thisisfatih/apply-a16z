@@ -10,3 +10,5 @@ coverage/
 dist/
 .claude/settings.local.json
 a16z-fields-local.md
+.playwright-mcp/
+application-backup.txt

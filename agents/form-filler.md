@@ -32,23 +32,30 @@ If any prerequisite is missing, stop and report what's needed.
 
 ## Phase 1 — Navigate and unlock form
 
+**The email gate has a reCAPTCHA. This cannot be automated. Founder must solve it manually.**
+
 ```
 Step 1: Open browser
   → browser_navigate to: https://speedrun.a16z.com/apply
 
-Step 2: Take screenshot to confirm page loaded
+Step 2: Screenshot and pause for CAPTCHA
   → browser_take_screenshot
-  → Confirm: email input visible
+  → Report to founder:
+    "Browser is open at speedrun.a16z.com/apply.
+     Your email is pre-filled. Please:
+       1. Complete the reCAPTCHA checkbox in the browser
+       2. Click GET STARTED
+       3. Wait for the form to load
+       4. Tell me when it's open and I'll take over"
+  → STOP. Wait for founder confirmation.
 
-Step 3: Fill email gate
-  → browser_fill_form with founder's email
-  → Click "Get started" / submit button
-  → Wait 3 seconds for form to load
-
-Step 4: Screenshot to confirm form unlocked
-  → browser_take_screenshot
-  → Report to founder: "Form is open. Starting to fill fields."
+Step 3: Confirm form loaded
+  → browser_take_screenshot after founder confirms
+  → Verify URL is now /apply/form
+  → Report: "Form is open. Starting to fill fields."
 ```
+
+Do not attempt to click the reCAPTCHA or submit the email gate. These actions will fail silently or trigger bot detection.
 
 ---
 
@@ -63,24 +70,115 @@ Step 5: Take snapshot of form structure
   → Build a live field map: { label_text → input_selector }
 ```
 
-Map each discovered field against our answer set using this matching table:
+**Verified field map (DOM snapshot 2026-04-26, SR007):**
 
-| Our field ID | Expected label patterns (match any) |
-|---|---|
-| one_liner | "one-line", "one sentence", "describe your company", "what do you do" |
-| company_description | "what are you building", "tell us about", "company description" |
-| traction | "traction", "progress", "what have you achieved" |
-| founders | "founder", "team", "who are you", "about you" |
-| market_insight | "insight", "earned secret", "what do you know", "unique insight" |
-| market_size | "market", "market size", "TAM", "opportunity" |
-| competitors | "competitor", "competition", "how are you different" |
-| what_have_you_built | "built", "product", "what exists", "what have you made" |
-| velocity_proof | "fast", "velocity", "move fast", "example of" |
-| raise_amount | "raising", "how much", "funding amount" |
-| use_of_funds | "use of funds", "what will you do with" |
-| video_pitch | "video", "pitch video", "loom" |
+### Section 1: Team
 
-For any discovered field that doesn't match: flag it as `[UNMAPPED FIELD]` and show the label to the founder before proceeding.
+| Our field ID | Form label (exact) | Type | Notes |
+|---|---|---|---|
+| fulltime_status | "Are you full-time or part-time on the startup?" | Radio | Full-time / Part-time |
+| founder_count | "Number of Full-Time Founders" | Radio | 0–5 |
+| total_fte | "Total FTE Employees" | Number | Includes founders |
+| founder_first_name | "first name *" | Text | Per founder block |
+| founder_last_name | "last name *" | Text | Per founder block |
+| founder_email | "email *" | Text | Per founder block |
+| founder_phone | "phone number" | Text | Optional |
+| founder_experience | "Founder experience *" | Textarea | 100 words, per founder |
+| founder_country | "country *" | Dropdown | Per founder |
+| founder_city | "City *" | Text | Per founder |
+| founder_citizenship | "Citizenship *" | Dropdown | Per founder |
+| founder_university | "College / University *" | Text | Per founder |
+| founder_education | "Highest education" | Dropdown | Optional |
+| founder_years_exp | "years of experience *" | Number | Per founder |
+| founder_technical | "Are you technical enough to build the product end-to-end?" | Radio | Yes/No |
+| founder_linkedin | "LinkedIn url *" | URL | Per founder |
+| founder_github | "github url" | URL | Optional |
+| founder_twitter | "x url" | URL | Optional |
+| founder_portfolio | "portfolio url" | URL | Optional |
+| team_description | "Team description *" | Textarea | 100 words, shared |
+
+**Co-founder:** Click "add co-founder" button to expand additional founder blocks.
+
+### Section 2: Startup Details
+
+| Our field ID | Form label (exact) | Type | Notes |
+|---|---|---|---|
+| startup_name | "startup name *" | Text | — |
+| one_liner | "One-liner *" | Text | **10 WORDS HARD LIMIT** |
+| startup_description | "startup description *" | Textarea | 100 words |
+| primary_category | "Primary Category *" | Radio | See options in field guide |
+| secondary_category | "Secondary Category (optional)" | Checkboxes | Optional |
+| build_country | "Country *" (build location) | Dropdown | — |
+| build_city | "City *" (build location) | Text | — |
+| founded_year | "year *" | Dropdown | — |
+| founded_month | "month *" | Dropdown | — |
+| company_website | "website url" | URL | Optional |
+| additional_info | "Additional information" | Textarea | 100 words, optional |
+
+### Section 3: Additional Information (click label to expand)
+
+**Traction section** — click "Traction" label, then toggle Revenue/Usage:
+
+| Our field ID | Form label (exact) | Type |
+|---|---|---|
+| launch_year | "year *" (Product Launch Date) | Dropdown |
+| launch_month | "month *" (Product Launch Date) | Dropdown |
+| traction_notes | "traction notes (optional)" | Textarea (100 words) |
+| arr | "Annual Recurring Revenue (USD)" | Number |
+| acv | "Avg. Annual Contract Value (USD)" | Number |
+| ndr | "Net Dollar Retention %" | Number |
+| revenue_growth | "Monthly growth rate %" (revenue) | Number |
+| dau | "Daily Active Users" | Number |
+| wau | "Weekly Active Users" | Number |
+| mau | "Monthly Active Users" | Number |
+| user_growth | "Monthly growth rate %" (users) | Number |
+| d1 | "day 1 retention (D1) %" | Number |
+| d7 | "day 7 retention (D7) %" | Number |
+| d30 | "day 30 retention (D30) %" | Number |
+| m1 | "Month 1 Retention (M1) %" | Number |
+
+**Funding History section** — click "Funding History" label:
+
+| Our field ID | Form label (exact) | Type |
+|---|---|---|
+| total_raised | "Total Funding Raised (USD)" | Number |
+| post_money | "Post-Money Valuation (USD)" | Number |
+| last_round_date | "date *" | Date |
+| burn_rate | "Monthly Burn Rate (USD)" | Number |
+| runway | "Runway (months)" | Number |
+| investor_name | "name or firm *" | Text (repeatable) |
+| investor_email | "email *" | Text (repeatable) |
+| investor_amount | "amount raised (USD)" | Number (repeatable) |
+
+**Active Fundraising Round section** — click "Active Fundraising Round" label:
+
+| Our field ID | Form label | Type |
+|---|---|---|
+| raise_target | "Target amount (USD) *" | Number |
+| raise_start | "start date *" | Date |
+| raise_deadline | "target date description" | Text |
+
+**Referral section** — click "Referral" label:
+
+| Our field ID | Form label | Type |
+|---|---|---|
+| referrer_name | "Name *" | Text |
+| referrer_email | "Email *" | Text |
+| referrer_linkedin | "LinkedIn URL *" | URL |
+
+**Discovery (always visible, required):**
+
+| Our field ID | Form label | Type |
+|---|---|---|
+| discovery_source | "source *" | Dropdown |
+| discovery_detail | "additional info (optional)" | Text |
+
+---
+
+**Fields that do NOT exist** (don't attempt to fill):
+- Earned secret, market insight, why now, competitors, TAM, business model, video pitch
+
+For any discovered field not in this map: flag as `[UNMAPPED FIELD]` and show the label to the founder before proceeding.
 
 ---
 

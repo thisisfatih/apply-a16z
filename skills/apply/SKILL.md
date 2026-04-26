@@ -128,20 +128,30 @@ After the skill completes, synthesize a 3-sentence "earned secret statement" the
 
 ## Stage 4 — Answer Generation
 
-For each application field, draft an answer using the full intake data + earned secret. Apply these rules to every answer:
+**Critical: the real form has 4 text fields, not 12+. All narrative compresses here.**
+
+The actual a16z speedrun form (verified SR007) has these text fields:
+1. **One-liner** — 10 WORDS (hard limit)
+2. **Startup Description** — 100 words
+3. **Relevant experience** — 100 words per founder
+4. **Team description** — 100 words
+5. **Traction notes** — 100 words (only if traction section opened)
+6. **Anything else** — 100 words (optional, use for reapplication delta)
+
+There are NO standalone fields for: earned secret, why now, competitors, market size, business model, video pitch. Everything compresses into the fields above + the pitch deck PDF.
 
 ### The reviewer priority order (encode this in every answer)
 
 **Josh Lu, GM a16z speedrun — verbatim:** "Traction is number one, two, and three. And then it's team. Then it's TAM."
 
-Weight answers accordingly:
-- Traction proof → front-loaded, specific, with timeline
-- Team → biographical output not credential list
-- Market size → bottom-up, realistic, not top-down %
+Weight accordingly:
+- Startup Description: lead with traction signal, then problem+solution+insight
+- Team fields: biographical output, not credential list
+- Pitch deck: primary vehicle for market, competition, why now, financials
 
-### SR006 revenue velocity benchmarks (calibrate "strong traction")
+### SR006 revenue velocity benchmarks (calibrate traction framing)
 
-These are real numbers from accepted SR006 companies. Use as calibration for the eval stage:
+Real numbers from accepted SR006 companies:
 - $4.5M cARR in 4 weeks (Straia)
 - $710K cARR in 5 weeks (Bota)
 - $680K ARR in 5 weeks (Bilrost)
@@ -149,62 +159,128 @@ These are real numbers from accepted SR006 companies. Use as calibration for the
 - $210K ARR in 3 months (Concorda)
 - $201K cARR in 3 months (Cascade)
 
-If the founder's traction is below these: that's fine, but the framing must emphasize velocity of learning, quality of validation, or depth of customer conviction.
+Below these: frame velocity of learning, customer quality, depth of conviction. Don't skip the traction section.
 
-### Answer generation rules
+---
 
-**Structure every answer as: Claim → Evidence → So-what**
+### Field 1: One-liner (10 words)
+
+**Draft rule:** Count words. Rewrite until ≤10. No exceptions — the form enforces this.
+
+Pattern: [what you do] for [who] — [traction signal if any]
+- "AI underwriting for commercial insurance brokers" (7 words)
+- "Automates commercial loan processing — $680K ARR, 5 weeks" (8 words)
+
+Forbidden: Starting with "We", "Building", "A platform that". No adjectives, no cleverness. Be obvious.
+
+---
+
+### Field 2: Startup Description (100 words)
+
+**This field must carry: problem + solution + earned insight + why now + traction signal.**
+
+Apply SCQA structure (Fareed Mosavat's framework):
+- Situation: who has this problem, at what scale
+- Complication: why existing solutions fail (specific, not generic)
+- Question: what would it take to solve it
+- Answer: what you built + why it works + proof
+
+**Claim → Evidence → So-what on every sentence:**
 - Claim: the bold statement
-- Evidence: specific numbers, events, decisions (no vague language)
-- So-what: why this matters for the company's trajectory
+- Evidence: specific number, named customer, date, decision
+- So-what: why it matters for trajectory
 
-**For company one-liner:** Apply SCQA (Fareed Mosavat's framework):
-- Situation → Complication → Question → Answer, compressed to one sentence
-- SR006 pattern: 32% of accepted companies put ARR in the one-liner
-- Example: "Bilrost automates commercial loan processing — $680K ARR in 5 weeks."
+Weave the earned secret here — the non-obvious thing you know that makes this work. This is the single most important paragraph in the application.
 
-**For team bio fields:** Apply the "Dinner Party Jerk" test (Andrew Chen):
+**Checklist before submitting:**
+- Contains at least one number (revenue, users, growth rate, timeline)
+- Names the specific problem owner (not "companies", not "people")
+- States the mechanism, not just the outcome
+- Contains the insight that could only come from someone with earned access to this problem
+- ≤100 words (count before pasting)
+
+---
+
+### Field 3: Relevant experience per founder (100 words)
+
+Apply the **Dinner Party Jerk test** (Andrew Chen):
 - Push until the bio feels uncomfortably self-promotional
 - That's approximately the right level
-- Include: specific metrics from past work, GitHub stars, prior revenue, domain evidence
-- Never: employer logos without outputs, vague "10+ years in industry"
 
-**Voice**
+Include:
+- Specific outputs: "shipped X to Y users", "sold $Z in contracts", "built and exited to [acquirer]"
+- Domain proof with numbers: GitHub stars, OSS downloads, prior revenue
+- Technical evidence if technical founder: repos, systems built at scale
+
+Never include:
+- Employer logos without outputs ("ex-Google")
+- Education credentials (separate field for that)
+- Vague tenure claims ("10+ years in the space")
+
+---
+
+### Field 4: Team description (100 words)
+
+Cover in order of signal strength:
+1. How long you've worked together + what you shipped together (proof of execution as a unit)
+2. Complementary split: who builds, who sells (and evidence it works)
+3. How you met — proximity to problem or prior co-founder relationship
+4. One named advisor with specific domain relevance (what they built, not their title)
+
+If solo founder: acknowledge directly. Frame around prior zero-to-one proof and specific plan for next hire (timeline, role, sourcing strategy).
+
+---
+
+### Field 5: Traction notes (100 words, if traction section opened)
+
+Context for the structured numbers. Explain:
+- Velocity: "went from 0 to $X ARR in N weeks"
+- Customer quality: named logo if possible, or role/company type
+- How you got there: outbound, inbound, word-of-mouth (shows repeatability)
+- What the number means: "N of our 12 customers expanded after 30 days"
+
+Don't duplicate the numbers — they're already in the structured fields. Add context the numbers alone can't convey.
+
+---
+
+### Pitch deck guidance
+
+The pitch deck is the primary vehicle for earned secrets, competitive analysis, why now, market sizing, and financial projections. Everything that doesn't fit in 100 words lives here.
+
+Josh Lu's preferred structure (7 slides, max 15):
+1. Problem — named customer or stat, not a market description
+2. User — who exactly, what they do today instead of using you
+3. Solution — what you built, how it works, what makes it different
+4. What's built — demo, screenshots, current state
+5. Traction — numbers + timeline + growth rate
+6. Market — bottom-up sizing from your customer, not top-down % of TAM
+7. Team — output-based bios, domain proof
+
+Avoid: advisor slides, Harvey Ball competitive matrices (feature checkbox tables), dense text, stock photos.
+Deck link must be publicly accessible. Private links = reviewers skip it.
+
+---
+
+### Voice rules (all fields)
+
 - First-person plural ("we") for team actions, first-person singular for founder insight
-- Sentences under 20 words. No passive voice. No hedging ("we hope to", "we think", "we believe").
-- One idea per sentence.
+- Sentences under 20 words. No passive voice.
+- No hedging: "we hope to", "we think", "we believe", "we plan to"
+- One idea per sentence
 
-**Forbidden phrases** — flag and remove any of these:
-- "passionate about"
-- "unique opportunity"
-- "disrupting the X space"
-- "we are building"
-- "innovative solution"
-- "game-changer"
-- "world-class"
-- "leverage AI to"
-- "streamline workflows"
+**Forbidden phrases:**
+- "passionate about", "unique opportunity", "disrupting the X space"
+- "we are building", "innovative solution", "game-changer", "world-class"
+- "leverage AI to", "streamline workflows"
 - Any sentence starting with "I believe" or "We feel"
 - Any TAM statement starting with "The global X market is $"
-- Harvey Ball competitive analysis ("we have more green checkmarks")
 
-**Length targets**
-- Short-answer fields (< 500 chars): 2–4 sentences, no filler
-- Long-answer fields: 150–250 words max, structured paragraphs
-- Video pitch script: 12–15 sentences, punchy, designed for verbal delivery
-
-**Signals a16z weighs** — embed where true:
-1. Zero-to-one proof: what did you build with no resources/permission?
-2. Velocity: specific timeline compression ("shipped v1 in 72 hours")
-3. Earned secret: non-obvious insight threaded through every answer
-4. Complementary team: who does what, why that pairing wins
-5. Market timing: the specific forcing function that makes NOW the window
-6. Competitive obsession (Josh Lu): "maniacal about understanding competition and why all competitors will fail"
-
-**Tone target:** Internal strategy memo, not investor pitch. Depth over polish.
+**Tone target:** Internal strategy memo. Depth beats polish.
 Quote from accepted founder Mohamed Mohamed (SR006): "Depth beats polish every time."
 
-After drafting all answers, display them in a numbered list matching the field list. Label each: [DRAFT — needs your review].
+---
+
+After drafting all answers, display them in a numbered list matching the field list. Label each: [DRAFT — needs your review]. Count words for each field and flag any over limit.
 
 ---
 
