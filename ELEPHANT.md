@@ -4,6 +4,12 @@
 
 # ELEPHANT — apply-a16z project memory (newest first)
 
+[!!] 2026-04-26 21:32 : apex takeover complete — 7 specialists, HTML report at .reports/apex-takeover-2026-04-26-0000.html — @fatih
+[2026-04-26 21:32] CRITICAL: founder data plaintext at ~/.apply-a16z/progress.json, dir 755 (world-readable) — fix: mkdirSync mode 0o700
+[2026-04-26 21:32] CRITICAL: skills/apply/SKILL.md:409–411 references missing docs (a16z-speedrun-fields.md, answer-examples.md) — dead paths, Stage 2 silently broken
+[2026-04-26 21:32] HIGH: session-start.js JSON.parse no try-catch (crash on corrupt progress.json); session-end.js CLAUDE_APPLICATION_STATE unguarded (silent data loss)
+[2026-04-26 21:32] prompt engineering 8.5/10 — rubric calibrated, sample scores 92/100, anti-hallucination guards solid — don't touch eval-answers rubric or vc-critic persona
+
 [2026-04-26] a16z "Big Ideas" = their RFS equivalent. Published annually (parts 1-3 on a16z.com + speedrun.substack.com). Individual partners also post specific RFS threads (e.g. Jonathan Lai: "GUIs for Agents" — visual abstraction layer for agents).
 [2026-04-26] SR006 (Winter/Spring 2026) currently active. SR007 apps close May 17 2026, cohort runs Jul 27–Oct 11 2026.
 
