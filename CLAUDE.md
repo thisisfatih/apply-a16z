@@ -87,6 +87,14 @@ These are runtime references — skills read them during execution. Edits here a
 
 If you modify the progress JSON schema, update both hook scripts and the progress tracking format in `skills/apply/SKILL.md`.
 
+## Version bumping
+
+When bumping the plugin version, update **both** in the same commit:
+1. `"version"` in `.claude-plugin/plugin.json`
+2. The `version-X.Y.Z-green` badge in `README.md`
+
+A pre-commit hook at `.git/hooks/pre-commit` enforces this — mismatched versions block the commit.
+
 ## Do not
 
 - Do not write documentation that describes what code does instead of why decisions were made.
