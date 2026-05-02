@@ -82,6 +82,25 @@ Ask these questions ONE BLOCK AT A TIME. Wait for answers before proceeding. Do 
 10. Who writes code? Who sells? Is there a gap?
 ```
 
+### Block C.1 — Founder personal details (required for form fill)
+
+Collect these for EACH founder. Do not infer from a CV — ask explicitly. The form-filler must receive exact values, not guesses.
+
+```
+For each founder:
+  - Full legal first name and last name
+  - Email address
+  - Current city and country
+  - Citizenship (nationality on passport)
+  - University / college name (exact institution name)
+  - Highest degree earned (BSc / MSc / MBA / PhD / Other)
+  - Years of total professional experience (number)
+  - Are you willing to relocate to San Francisco for the 12-week in-person program? (Yes / No / Already there)
+```
+
+If the founder says "Yes" to SF relocation: set build_country = United States, build_city = San Francisco.
+If "No": set their current city/country and note the risk in the eval stage.
+
 ### Block D — The insight
 ```
 11. Why does this company need to exist NOW — what changed in the world that makes this the right moment?

@@ -34,3 +34,4 @@
 2026-04-26 18:22 : chore: add shields.io badges to README (version 0.1.0, MIT, Claude Code) — @fatih
 2026-04-26 16:29 : fix: correct CLAUDE.md skill map and linkcheck reliability — @fatih
 2026-04-26 20:29 : feat: add writing density rules + a16z RFS alignment check — @fatih
+2026-05-02 14:16 : fix: prevent form-fill accuracy failures and wrong build location — @fatih

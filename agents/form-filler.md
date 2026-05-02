@@ -28,6 +28,24 @@ Before starting, verify:
 
 If any prerequisite is missing, stop and report what's needed.
 
+### Personal fields completeness check (run before opening browser)
+
+The following personal fields must be explicitly provided in the answer set. Check each:
+
+- [ ] founder_first_name (exact legal name)
+- [ ] founder_last_name (exact legal name)
+- [ ] founder_email
+- [ ] founder_city (current or SF if relocating)
+- [ ] founder_country (current or USA if relocating)
+- [ ] founder_citizenship (passport nationality)
+- [ ] founder_university (exact institution name)
+- [ ] founder_education (degree level)
+- [ ] founder_years_exp (number)
+- [ ] build_city (San Francisco if founder is relocating for program; otherwise current city)
+- [ ] build_country (United States if relocating; otherwise current country)
+
+If any of these are missing: report exactly which fields are absent and stop. Do not open the browser. Do not infer values.
+
 ---
 
 ## Phase 1 — Navigate and unlock form
@@ -275,3 +293,5 @@ Save to `./application-backup.txt` in working directory.
 - Never stores the founder's email beyond the current session
 - Never sends data to any external service
 - Never fills fields with fabricated data — only uses approved answer set
+- Never infers or guesses personal fields (university, citizenship, years_exp, country, city). If any personal field is missing from the answer set, stop and report: "[FIELD NAME] was not provided in the answer set. Cannot infer — please supply exact value."
+- Never paraphrases or rewrites text answer fields. Fill verbatim exactly as provided, character for character.
