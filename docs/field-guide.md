@@ -121,6 +121,8 @@ Pick the most accurate primary. Secondary is optional — only add if genuinely 
 ### Build location, Founded date, Company Website
 Logistics fields. Fill accurately.
 
+**Build location — speedrun-specific rule:** The program is 12 weeks in-person in San Francisco. If the founder intends to relocate for the program, set build_country = United States, build_city = San Francisco. Setting your current non-SF city signals you may not attend in person. Confirm intent explicitly during intake: "Are you willing to relocate to SF for the 12-week program?"
+
 ### Anything else we should know?
 **Limit: 100 words. Optional. Density: lite** — clear delta/context, full sentences, no padding.
 

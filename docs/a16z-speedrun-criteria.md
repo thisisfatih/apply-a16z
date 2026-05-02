@@ -168,3 +168,4 @@ Every answer should pass the "so what?" test. Read the draft. Ask "so what?" If 
 | Investment per company | Up to $1M ($500K upfront, 10% SAFE + $500K pro-rata) |
 | Partner credits | $5M+ |
 | Program | 12 weeks, in-person SF |
+| Location signal | Reviewers expect founders to attend in person. If relocating to SF for the program, set build_location = San Francisco, CA, USA — not your current city. Stating a non-SF city signals you may not commit to the residency. |
