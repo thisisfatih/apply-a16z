@@ -36,3 +36,7 @@
 2026-04-26 20:29 : feat: add writing density rules + a16z RFS alignment check — @fatih
 2026-05-02 14:16 : fix: prevent form-fill accuracy failures and wrong build location — @fatih
 2026-05-02 14:27 : chore: gitignore .claude/ session and settings artifacts — @fatih
+2026-07-26 18:09 : docs refresh — SR007 closed May 17 2026, SR008 next (late Jan–Apr 2027, SF) confirmed via a16z FAQ + live apply page hit — @fatih
+2026-07-26 18:09 : fact: credits $5M+→$8M+, contact sr-apps@a16z.com→sr-team@a16z.com, community 600+ founders — updated in a16z-speedrun-criteria.md — @fatih
+[!!] 2026-07-26 18:09 : gap: SR008 form fields NOT re-verified — live form still email+reCAPTCHA gated, automation can't pass it. Flagged in field-guide.md, a16z-speedrun-fields.md, form-filler.md — need founder paste or manual DOM snapshot before next application — @fatih
+2026-07-26 18:09 : no change — Big Ideas 2026 list, review team, scoring rubric, forbidden phrases all still current, don't touch — @fatih
