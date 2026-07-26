@@ -1,7 +1,13 @@
 # Application Field Guide
-# Verified: 2026-04-26 via live DOM snapshot of speedrun.a16z.com/apply/form (SR007)
+# Fields last verified: 2026-07-26 via live DOM snapshot of speedrun.a16z.com/apply/form (SR008-era form,
+# founder cleared the email+reCAPTCHA gate and handed control back for automation)
+# SR007 closed May 17, 2026, now in review. SR008 (late Jan–Apr 2027, SF) is the upcoming cohort — this
+# is the live form currently accepting rolling submissions for it.
+#
+# BREAKING CHANGE: limits are CHARACTER-based (live "X / N" counters in the form), not word-based. All
+# "100 words" / "10 words" language from the prior verification (2026-04-26) has been corrected below.
 
-The form is shorter than most founders expect. Three sections, brutal word limits. There are no standalone fields for earned secrets, competitors, market size, why now, or video pitch. All narrative depth lives in four 100-word fields + your pitch deck.
+The form is shorter than most founders expect. Three sections, brutal character limits. There are no standalone fields for earned secrets, competitors, market size, why now, or video pitch. All narrative depth lives in four tightly-capped text fields + your pitch deck.
 
 **Application writing process endorsed by a16z team:**
 1. Write raw — all thoughts, unfiltered
@@ -23,11 +29,11 @@ Radio: 0–5. "Founders are individuals with over 10% equity." If part-time or n
 Number. Include founders. Part-time staff counted proportionally (2 × half-time = 1 FTE).
 
 ### Relevant experience (per founder)
-**Limit: 100 words. Required. Density: full** — drop articles, fragments OK, stack outputs.
+**Limit: 1000 characters. Required. Density: full** — drop articles, fragments OK, stack outputs.
 
 Prompt: "In a few sentences, highlight your most relevant professional, startup, or industry experience. Focus on track record, domain expertise, and past wins."
 
-This is your only bio field. 100 words = 3–5 sentences. Every word must pull weight.
+This is your only bio field. 1000 characters ≈ 150–180 words, 5–8 sentences. Every word must still pull weight — more room than the old 100-word cap, not license to pad.
 
 **What to include:**
 - Specific outputs: "shipped X to Y users", "sold $Z in contracts", "built and exited to [acquirer]"
@@ -48,7 +54,7 @@ Yes/No. If No, explain in Team Description how this gap is covered.
 LinkedIn required for all founders. GitHub highly recommended for technical founders — it's a credibility signal reviewers check.
 
 ### Tell us more about the team
-**Limit: 100 words. Required. Density: full** — drop articles, facts + proof, no connective filler.
+**Limit: 1000 characters. Required. Density: full** — drop articles, facts + proof, no connective filler.
 
 Prompt: "How does the team know each other? Is there anyone else on the team? Why is this the best team to win? Do you have any key advisors?"
 
@@ -70,11 +76,11 @@ Prompt: "How does the team know each other? Is there anyone else on the team? Wh
 Text input. Name only.
 
 ### One-liner
-**Limit: 10 WORDS. Required. Density: ultra** — noun phrase, no articles, count every word.
+**Limit: 100 CHARACTERS. Required. Density: ultra** — noun phrase, no articles, count every character.
 
 Prompt: "What do you do and for whom? E.g. 'AI-powered therapist for Gen Z'"
 
-Ten words. That's it. This is your first impression — make it concrete, not clever.
+100 characters — roughly 15–18 words depending on word length, but the form enforces characters, not a word count. This is your first impression — make it concrete, not clever.
 
 **SR006 pattern:** The most effective one-liners name: (1) what you do, (2) who for, and optionally (3) a traction signal if you have one.
 
@@ -88,11 +94,11 @@ Ten words. That's it. This is your first impression — make it concrete, not cl
 **Mistake:** Trying to be clever or poetic. Be obvious.
 
 ### Startup Description
-**Limit: 100 words. Required. Density: lite** — no filler/hedging, full sentences, SCQA logic must survive.
+**Limit: 800 characters. Required. Density: lite** — no filler/hedging, full sentences, SCQA logic must survive.
 
 Prompt: "What problem are you solving? What are you building?"
 
-This is your most important field. 100 words must carry: the specific problem, your solution, why it works now, your earned insight, and ideally a traction signal. There is no "why now" field, no "earned secret" field, no "competitors" field. Everything compresses here.
+This is your most important field. 800 characters (~120–140 words) must carry: the specific problem, your solution, why it works now, your earned insight, and ideally a traction signal. There is no "why now" field, no "earned secret" field, no "competitors" field. Everything compresses here.
 
 **Structure (Claim → Evidence → So-what):**
 1. The problem, stated with specificity (not "companies struggle with X" — who, exactly, loses what, exactly)
@@ -124,7 +130,7 @@ Logistics fields. Fill accurately.
 **Build location — speedrun-specific rule:** The program is 12 weeks in-person in San Francisco. If the founder intends to relocate for the program, set build_country = United States, build_city = San Francisco. Setting your current non-SF city signals you may not attend in person. Confirm intent explicitly during intake: "Are you willing to relocate to SF for the 12-week program?"
 
 ### Anything else we should know?
-**Limit: 100 words. Optional. Density: lite** — clear delta/context, full sentences, no padding.
+**Limit: 1000 characters. Optional. Density: lite** — clear delta/context, full sentences, no padding.
 
 Use this for: reapplication context ("Since our last application: [specific delta]"), unusual team structure explanations, or anything that doesn't fit elsewhere. Don't pad it — if you don't need it, leave it blank.
 
@@ -151,7 +157,7 @@ This is the primary narrative vehicle. Everything the 100-word fields can't hold
 
 **Deck link must be publicly accessible.** Private links = reviewers skip it.
 
-### Traction notes (100 words) — **Density: full** — numbers first, context in fragments, zero hedging.
+### Traction notes (1000 characters, optional) — **Density: full** — numbers first, context in fragments, zero hedging.
 
 ### Traction — Optional but high-signal
 
@@ -169,7 +175,7 @@ Check this section if you have any of these numbers. Leaving it empty when you h
 - Bounded retention: D1, D7, D30 (% who return exactly at that interval)
 - M1 retention (% who return exactly 1 month after signup)
 
-**Traction notes (100 words):** Narrative context for the numbers. Explain velocity, quality of customers, or pre-revenue validation.
+**Traction notes (1000 characters, prompt: "Any general commentary on your traction?"):** Narrative context for the numbers. Explain velocity, quality of customers, or pre-revenue validation. Only Product Launch Date is actually required once you open this section — the notes field itself stays optional.
 
 **SR006 revenue velocity benchmarks (use as calibration):**
 - $4.5M cARR in 4 weeks (Straia)
@@ -206,7 +212,7 @@ Before submitting each text field, verify:
 - [ ] No forbidden phrases (see `docs/a16z-speedrun-criteria.md`)
 - [ ] Answers the question asked, not an easier version
 - [ ] Could not have been written by someone without direct customer contact
-- [ ] One-liner is exactly ≤10 words
-- [ ] All text fields are ≤100 words (form enforces this)
+- [ ] One-liner is ≤100 characters (not words — count characters)
+- [ ] Startup Description ≤800 characters; Relevant experience, Team description, Anything else, Traction notes ≤1000 characters each (form enforces these live)
 - [ ] Pitch deck URL is publicly accessible (no sign-in required)
 - [ ] Traction section filled with every number you have

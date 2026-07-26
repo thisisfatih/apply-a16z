@@ -1,13 +1,21 @@
 # a16z Speedrun Application Fields
-# Last verified: 2026-04-26 via live form at speedrun.a16z.com/apply/form (DOM snapshot + all sections expanded)
-# SR007 — closes May 17, 2026 11:59pm PT (Summer/Fall cohort: July 27–Oct 11, 2026)
+# Last verified: 2026-07-26 via live form at speedrun.a16z.com/apply/form (DOM snapshot, all sections expanded,
+# founder cleared the email+reCAPTCHA gate manually and handed control back for automation)
+# SR007 closed May 17, 2026 (Summer/Fall cohort: July 27–Oct 11, 2026, now in review).
+# SR008 (late Jan–Apr 2027, SF) is the upcoming cohort — this snapshot is the live SR008-era form.
+#
+# BREAKING CHANGE vs prior cache (was dated 2026-04-26, SR007): limits are CHARACTER-based, shown in the
+# UI as live "X / N" counters — not word-based. Every "100 words" / "10 WORDS" rule in older plugin docs
+# undercounted or overcounted room relative to the real constraint. Numbers below are read directly off
+# the counters, not estimated.
 
 ---
 
 ## Form structure
 
-Three sections. reCAPTCHA on the email gate — must be solved manually before the form loads.
-Automation takes over after CAPTCHA is cleared.
+Single scrollable page, three anchored sections (#team, #startup-details, #additional-information).
+reCAPTCHA on the email gate — must be solved manually before the form loads. Automation takes over after
+CAPTCHA is cleared and the founder confirms the form is open.
 
 ---
 
@@ -27,12 +35,12 @@ Automation takes over after CAPTCHA is cleared.
 | Last name | Text | — | ✓ |
 | Email | Text | — | ✓ |
 | Phone | Text | — | — |
-| Relevant experience | Textarea | **100 words** | ✓ |
+| Relevant experience ("Founder experience") | Textarea | **1000 characters** | ✓ |
 | Country | Dropdown | — | ✓ |
 | City | Text | — | ✓ |
 | Citizenship | Dropdown | — | ✓ |
 | College / University | Text | — | ✓ |
-| Highest education | Dropdown | — | — |
+| Highest education | Dropdown | — | — (explicitly marked OPTIONAL) |
 | Years of experience | Number | — | ✓ |
 | Technical enough to build end-to-end? | Radio Yes/No | — | ✓ |
 | LinkedIn URL | URL | — | ✓ |
@@ -46,9 +54,9 @@ Automation takes over after CAPTCHA is cleared.
 
 | Field | Type | Limit | Required |
 |---|---|---|---|
-| Tell us more about the team | Textarea | **100 words** | ✓ |
+| Tell us more about the team | Textarea | **1000 characters** | ✓ |
 
-**Prompt:** "How does the team know each other? Is there anyone else on the team? Why is this the best team to win? Do you have any key advisors?"
+**Prompt:** "How does the team know each other? Is there anyone else on the team? Why is this the best team to win? Do you have any key advisors? Etc"
 
 ---
 
@@ -57,22 +65,22 @@ Automation takes over after CAPTCHA is cleared.
 | Field | Type | Limit | Required |
 |---|---|---|---|
 | Startup Name | Text | — | ✓ |
-| One-liner | Text | **10 WORDS** | ✓ |
-| Startup Description | Textarea | **100 words** | ✓ |
+| One-liner ("Pitch your startup in one sentence.") | Text | **100 characters** | ✓ |
+| Startup Description | Textarea | **800 characters** | ✓ |
 | Primary Category | Radio | — | ✓ |
 | Secondary Category | Checkboxes | — | — |
 | Build location (country + city) | Dropdown + Text | — | ✓ |
 | Founded (year + month) | Dropdowns | — | ✓ |
 | Company Website | URL | — | — |
-| Anything else we should know? | Textarea | 100 words | — |
+| Anything else we should know? | Textarea | **1000 characters** | — |
 
 **One-liner prompt:** "What do you do and for whom? E.g. 'AI-powered therapist for Gen Z'"
-**Word limit is 10 words — not characters, not a sentence. 10 words.**
+**Limit is 100 characters — not 10 words.** 100 chars is roughly 15–18 words depending on word length; count characters, not words, when drafting.
 
 **Startup Description prompt:** "What problem are you solving? What are you building?"
-**This 100-word field must carry: problem + solution + earned insight + why now + traction signal.**
+**This 800-character field must carry: problem + solution + earned insight + why now + traction signal.** ~800 chars is roughly 120–140 words — looser than the old 100-word assumption, but still tight.
 
-**Primary categories:**
+**Primary categories (unchanged):**
 - B2B / Enterprise Applications
 - Consumer Applications
 - Deep Tech
@@ -88,14 +96,16 @@ Automation takes over after CAPTCHA is cleared.
 ## Section 3: Additional Information (all optional, collapsed by default — click to expand)
 
 ### Pitch Deck (PDF)
-File upload. Optional but critical — this is the primary vehicle for earned secrets, competitive analysis, market insight, why now, financials. Everything the 100-word fields can't hold.
+File upload. Optional but critical — this is the primary vehicle for earned secrets, competitive analysis, market insight, why now, financials. Everything the text fields can't hold.
 
 ### Traction (check to expand)
 
-| Field | Type | Required if section open |
-|---|---|---|
-| Product Launch Date (year + month) | Dropdowns | ✓ |
-| Traction notes | Textarea (100 words) | — |
+| Field | Type | Limit | Required if section open |
+|---|---|---|---|
+| Product Launch Date (year + month) | Dropdowns | — | ✓ |
+| Traction notes ("Any general commentary on your traction?") | Textarea | **1000 characters** | — (optional even with section open) |
+
+Only Product Launch Date is required once you check "Traction" — the notes field and both metrics toggles below are optional add-ons.
 
 **Share Revenue toggle** — structured numeric inputs:
 - Annual Recurring Revenue (USD) — "total predictable revenue per year from subscriptions or contracts, exclude one-time fees"
@@ -160,15 +170,15 @@ Commonly assumed to exist — they don't:
 - Revenue model field
 - Video pitch / Loom link field
 - "What have you built" field (separate from Startup Description)
-- Traction narrative field (only structured numbers + 100-word notes)
+- Traction narrative field (only structured numbers + a 1000-character notes field)
 
 **All narrative depth compresses into:**
-1. **One-liner** — 10 words. The only "hook" the form gives you.
-2. **Startup Description** — 100 words. Problem + solution + insight + timing + traction signal.
-3. **Relevant Experience** — 100 words per founder. Output-based bio, domain proof, past wins.
-4. **Team Description** — 100 words. Relationship depth, why this team wins.
+1. **One-liner** — 100 characters. The only "hook" the form gives you.
+2. **Startup Description** — 800 characters. Problem + solution + insight + timing + traction signal.
+3. **Relevant Experience** — 1000 characters per founder. Output-based bio, domain proof, past wins.
+4. **Team Description** — 1000 characters. Relationship depth, why this team wins.
 5. **Pitch deck PDF** — unbounded. Where all the narrative lives: earned secrets, market, competition, why now, financial projections.
-6. **Traction notes** — 100 words. Context for the numbers.
+6. **Traction notes** — 1000 characters, optional. Context for the numbers.
 
 ---
 
@@ -179,5 +189,5 @@ Commonly assumed to exist — they don't:
 - Traction section: click "Traction" label to expand, then toggle "Share Revenue" and/or "Share Usage Metrics" labels
 - Co-founders: click "add co-founder" button to append additional founder blocks
 - All Additional Information sections collapsed by default — click label to expand before filling
-- Word count limits enforced by form (displayed as "X / 100 words") — stay under
-- One-liner enforced at 10 words — draft must count words before filling
+- **Character** count limits enforced by form (displayed live as "X / N", e.g. "0/800") — stay under. Do not count words.
+- One-liner enforced at 100 characters — draft must count characters, not words, before filling
