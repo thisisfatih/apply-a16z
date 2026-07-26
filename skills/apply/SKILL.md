@@ -185,13 +185,14 @@ After the skill completes, synthesize a 3-sentence "earned secret statement" the
 
 **Critical: the real form has 4 text fields, not 12+. All narrative compresses here.**
 
-The actual a16z speedrun form (verified SR007) has these text fields:
-1. **One-liner** — 10 WORDS (hard limit)
-2. **Startup Description** — 100 words
-3. **Relevant experience** — 100 words per founder
-4. **Team description** — 100 words
-5. **Traction notes** — 100 words (only if traction section opened)
-6. **Anything else** — 100 words (optional, use for reapplication delta)
+The actual a16z speedrun form (verified 2026-07-26, live SR008-era form) has these text fields. Limits
+are CHARACTER counts read off the form's own live counters — not word counts:
+1. **One-liner** — 100 characters (hard limit)
+2. **Startup Description** — 800 characters
+3. **Relevant experience** — 1000 characters per founder
+4. **Team description** — 1000 characters
+5. **Traction notes** — 1000 characters (optional, even if traction section opened — only Product Launch Date is required there)
+6. **Anything else** — 1000 characters (optional, use for reapplication delta)
 
 There are NO standalone fields for: earned secret, why now, competitors, market size, business model, video pitch. Everything compresses into the fields above + the pitch deck PDF.
 
@@ -218,19 +219,19 @@ Below these: frame velocity of learning, customer quality, depth of conviction. 
 
 ---
 
-### Field 1: One-liner (10 words)
+### Field 1: One-liner (100 characters)
 
-**Draft rule:** Count words. Rewrite until ≤10. No exceptions — the form enforces this.
+**Draft rule:** Count characters, not words. Rewrite until ≤100. No exceptions — the form enforces this live.
 
 Pattern: [what you do] for [who] — [traction signal if any]
-- "AI underwriting for commercial insurance brokers" (7 words)
-- "Automates commercial loan processing — $680K ARR, 5 weeks" (8 words)
+- "AI underwriting for commercial insurance brokers" (41 chars)
+- "Automates commercial loan processing — $680K ARR, 5 weeks" (58 chars)
 
 Forbidden: Starting with "We", "Building", "A platform that". No adjectives, no cleverness. Be obvious.
 
 ---
 
-### Field 2: Startup Description (100 words)
+### Field 2: Startup Description (800 characters)
 
 **This field must carry: problem + solution + earned insight + why now + traction signal.**
 
@@ -252,11 +253,11 @@ Weave the earned secret here — the non-obvious thing you know that makes this 
 - Names the specific problem owner (not "companies", not "people")
 - States the mechanism, not just the outcome
 - Contains the insight that could only come from someone with earned access to this problem
-- ≤100 words (count before pasting)
+- ≤800 characters (count before pasting — the form counts characters, not words)
 
 ---
 
-### Field 3: Relevant experience per founder (100 words)
+### Field 3: Relevant experience per founder (1000 characters)
 
 Apply the **Dinner Party Jerk test** (Andrew Chen):
 - Push until the bio feels uncomfortably self-promotional
@@ -274,7 +275,7 @@ Never include:
 
 ---
 
-### Field 4: Team description (100 words)
+### Field 4: Team description (1000 characters)
 
 Cover in order of signal strength:
 1. How long you've worked together + what you shipped together (proof of execution as a unit)
@@ -286,7 +287,7 @@ If solo founder: acknowledge directly. Frame around prior zero-to-one proof and 
 
 ---
 
-### Field 5: Traction notes (100 words, if traction section opened)
+### Field 5: Traction notes (1000 characters, optional even if traction section opened)
 
 Context for the structured numbers. Explain:
 - Velocity: "went from 0 to $X ARR in N weeks"
@@ -300,7 +301,7 @@ Don't duplicate the numbers — they're already in the structured fields. Add co
 
 ### Pitch deck guidance
 
-The pitch deck is the primary vehicle for earned secrets, competitive analysis, why now, market sizing, and financial projections. Everything that doesn't fit in 100 words lives here.
+The pitch deck is the primary vehicle for earned secrets, competitive analysis, why now, market sizing, and financial projections. Everything that doesn't fit in the text fields lives here.
 
 Josh Lu's preferred structure (7 slides, max 15):
 1. Problem — named customer or stat, not a market description
@@ -322,12 +323,12 @@ Reviewers scan hundreds of applications. Different fields need different compres
 
 | Field | Density | Rule |
 |-------|---------|------|
-| One-liner (10w) | **ultra** | Noun phrase. No articles. Count every word. |
-| Relevant experience | **full** | Drop articles. Fragments OK. Stack outputs, not roles. |
-| Team description | **full** | Drop articles. Facts + proof. No connective filler. |
-| Startup description | **lite** | Keep sentences. Drop filler. SCQA logic must survive. |
-| Traction notes | **full** | Numbers first. Context fragments. No hedging. |
-| Anything else | **lite** | Clear delta. No padding. Full sentences for clarity. |
+| One-liner (100 chars) | **ultra** | Noun phrase. No articles. Count every character. |
+| Relevant experience (1000 chars) | **full** | Drop articles. Fragments OK. Stack outputs, not roles. |
+| Team description (1000 chars) | **full** | Drop articles. Facts + proof. No connective filler. |
+| Startup description (800 chars) | **lite** | Keep sentences. Drop filler. SCQA logic must survive. |
+| Traction notes (1000 chars) | **full** | Numbers first. Context fragments. No hedging. |
+| Anything else (1000 chars) | **lite** | Clear delta. No padding. Full sentences for clarity. |
 
 **Density levels:**
 - **ultra** — Noun phrases, abbreviate, minimum viable words ("AI underwriting, commercial brokers — $680K ARR")
@@ -353,7 +354,7 @@ Quote from accepted founder Mohamed Mohamed (SR006): "Depth beats polish every t
 
 ---
 
-After drafting all answers, display them in a numbered list matching the field list. Label each: [DRAFT — needs your review]. Count words for each field and flag any over limit.
+After drafting all answers, display them in a numbered list matching the field list. Label each: [DRAFT — needs your review]. Count characters (not words) for each field and flag any over limit.
 
 ---
 

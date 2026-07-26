@@ -88,7 +88,10 @@ Step 5: Take snapshot of form structure
   → Build a live field map: { label_text → input_selector }
 ```
 
-**Verified field map (DOM snapshot 2026-04-26, SR007):**
+**Verified field map (DOM snapshot 2026-07-26, live SR008-era form — founder cleared the email+reCAPTCHA
+gate manually and handed control back). Limits below are CHARACTER counts read off the form's live "X / N"
+counters, replacing the word-based limits from the stale 2026-04-26 SR007 cache. Step 5's live re-scan is
+still not optional — a16z can change the form again without notice.**
 
 ### Section 1: Team
 
@@ -101,7 +104,7 @@ Step 5: Take snapshot of form structure
 | founder_last_name | "last name *" | Text | Per founder block |
 | founder_email | "email *" | Text | Per founder block |
 | founder_phone | "phone number" | Text | Optional |
-| founder_experience | "Founder experience *" | Textarea | 100 words, per founder |
+| founder_experience | "Founder experience *" | Textarea | 1000 characters, per founder |
 | founder_country | "country *" | Dropdown | Per founder |
 | founder_city | "City *" | Text | Per founder |
 | founder_citizenship | "Citizenship *" | Dropdown | Per founder |
@@ -113,7 +116,7 @@ Step 5: Take snapshot of form structure
 | founder_github | "github url" | URL | Optional |
 | founder_twitter | "x url" | URL | Optional |
 | founder_portfolio | "portfolio url" | URL | Optional |
-| team_description | "Team description *" | Textarea | 100 words, shared |
+| team_description | "Team description *" | Textarea | 1000 characters, shared |
 
 **Co-founder:** Click "add co-founder" button to expand additional founder blocks.
 
@@ -122,8 +125,8 @@ Step 5: Take snapshot of form structure
 | Our field ID | Form label (exact) | Type | Notes |
 |---|---|---|---|
 | startup_name | "startup name *" | Text | — |
-| one_liner | "One-liner *" | Text | **10 WORDS HARD LIMIT** |
-| startup_description | "startup description *" | Textarea | 100 words |
+| one_liner | "One-liner *" | Text | **100 CHARACTERS HARD LIMIT** |
+| startup_description | "startup description *" | Textarea | 800 characters |
 | primary_category | "Primary Category *" | Radio | See options in field guide |
 | secondary_category | "Secondary Category (optional)" | Checkboxes | Optional |
 | build_country | "Country *" (build location) | Dropdown | — |
@@ -131,7 +134,7 @@ Step 5: Take snapshot of form structure
 | founded_year | "year *" | Dropdown | — |
 | founded_month | "month *" | Dropdown | — |
 | company_website | "website url" | URL | Optional |
-| additional_info | "Additional information" | Textarea | 100 words, optional |
+| additional_info | "Additional information" | Textarea | 1000 characters, optional |
 
 ### Section 3: Additional Information (click label to expand)
 
@@ -141,7 +144,7 @@ Step 5: Take snapshot of form structure
 |---|---|---|
 | launch_year | "year *" (Product Launch Date) | Dropdown |
 | launch_month | "month *" (Product Launch Date) | Dropdown |
-| traction_notes | "traction notes (optional)" | Textarea (100 words) |
+| traction_notes | "traction notes (optional)" | Textarea (1000 characters) |
 | arr | "Annual Recurring Revenue (USD)" | Number |
 | acv | "Avg. Annual Contract Value (USD)" | Number |
 | ndr | "Net Dollar Retention %" | Number |

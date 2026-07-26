@@ -40,3 +40,4 @@
 2026-07-26 18:09 : fact: credits $5M+→$8M+, contact sr-apps@a16z.com→sr-team@a16z.com, community 600+ founders — updated in a16z-speedrun-criteria.md — @fatih
 [!!] 2026-07-26 18:09 : gap: SR008 form fields NOT re-verified — live form still email+reCAPTCHA gated, automation can't pass it. Flagged in field-guide.md, a16z-speedrun-fields.md, form-filler.md — need founder paste or manual DOM snapshot before next application — @fatih
 2026-07-26 18:09 : no change — Big Ideas 2026 list, review team, scoring rubric, forbidden phrases all still current, don't touch — @fatih
+2026-07-26 18:15 : fix: correct application field limits from word-based to character-based — @fatih

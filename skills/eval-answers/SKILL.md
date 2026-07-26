@@ -112,6 +112,6 @@ All fields at 6.0+: proceed to `export-application` skill.
 | "Our team has experience in..." | -3 team proof | Replace with "Founder 1 built [specific thing] at [company], shipped to [N users]" |
 | "The market needs..." | -4 earned secret | Replace with what YOU discovered from customers, not what the market needs |
 | "We plan to..." for current capabilities | -3 voice | Fix tense. If it exists, say it exists. |
-| Answer > 300 words for short field | -2 voice | Cut to target length. Every sentence must earn its place. |
+| Answer near/over the field's character cap (100/800/1000, see field-guide.md) | -2 voice | Cut to target length. Every sentence must earn its place. |
 | Passive voice > 2 instances | -2 voice | Rewrite active. "Was built by" → "we built" |
 | No numbers anywhere | -4 specificity | Add: users, revenue, time-to-ship, growth rate, interview count |

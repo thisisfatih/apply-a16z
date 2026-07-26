@@ -19,7 +19,7 @@ All quotes are direct — not paraphrased.
 | Ryan Rigney | Marketing Partner | Application completeness, grit signals |
 | Sam Shank | Visiting Partner | Traction hierarchy, one-sentence pitch |
 
-Application status contact: sr-apps@a16z.com
+Application status contact: sr-team@a16z.com
 
 ---
 
@@ -166,6 +166,13 @@ Every answer should pass the "so what?" test. Read the draft. Ask "so what?" If 
 | Advancing to interview | ~10% of applicants |
 | Previously rejected then accepted | 30% of SR005 cohort |
 | Investment per company | Up to $1M ($500K upfront, 10% SAFE + $500K pro-rata) |
-| Partner credits | $5M+ |
+| Partner credits | $8M+ across 250+ tools-providers |
+| Community | 600+ active founders (portfolio-wide) |
 | Program | 12 weeks, in-person SF |
 | Location signal | Reviewers expect founders to attend in person. If relocating to SF for the program, set build_location = San Francisco, CA, USA — not your current city. Stating a non-SF city signals you may not commit to the residency. |
+
+## Cohort status (checked 2026-07-26)
+
+- **SR007** (Summer/Fall, Jul 27–Oct 11 2026, SF) — applications closed May 17, 2026. Cohort is in the review/interview phase.
+- **SR008** (Winter/Spring, late Jan–Apr 2027, SF) — is the upcoming cohort. Per the official FAQ: "off-cycle submissions are automatically reviewed for the upcoming cohort" — the live apply form at speedrun.a16z.com/apply accepts rolling submissions now, and these feed SR008 review.
+- No changes found to the review team, priority order ("traction, team, TAM"), scoring dimensions, or forbidden-phrase guidance below — these appear stable across cohorts. Re-verify credits/contact figures again after SR008 kicks off in case they're refreshed for the new cohort.
